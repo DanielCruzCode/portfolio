@@ -5,7 +5,9 @@ export function ProfileLayout () {
 
   return (
     <>
-      <Outlet/>
+      <main className="content-container">
+        <Outlet/>
+      </main>
       <Navigation/>
     </>
   )

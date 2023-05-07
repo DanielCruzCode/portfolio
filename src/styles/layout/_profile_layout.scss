@@ -1,0 +1,8 @@
+@use '../settings';
+
+.content-container {
+  width: settings.$width-for-readers;
+  // TODO Delete this one
+  border: 1px solid red;
+  margin: 2rem auto;
+}

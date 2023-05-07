@@ -1,0 +1,39 @@
+@use '../settings';
+
+$unitAmounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+/* FONT */
+.font-brand {
+  color: settings.$brand;
+}
+
+.font-title {
+  color: settings.$titles;
+}
+
+.font-texts {
+  color: settings.$texts;
+}
+
+.font-base {
+  color: settings.$bg-base;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@each $fontSize in $unitAmounts {
+  .text-#{$fontSize} {
+    font-size: calc(#{$fontSize}rem / 2);
+  }
+
+  .text-#{$fontSize}-half {
+    font-size: calc(#{$fontSize}rem / 1.6);
+  }
+}
+
+/* FONT VARIATIONS */
+.italic {
+  font-style: italic;
+}

@@ -1,0 +1,67 @@
+$unitAmounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+/* SPACING */
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.px-auto {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-auto {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@each $space in $unitAmounts {
+  /* MARGINS */
+  .mt-#{$space} {
+    margin-top: #{$space}rem;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}rem;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}rem;
+  }
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  /* PADDINGS */
+  .pt-#{$space} {
+    padding-top: #{$space}rem;
+  }
+  .pr-#{$space} {
+    padding-right: #{$space}rem;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}rem;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}rem;
+  }
+  .px-#{$space} {
+    padding: 0 #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+
+  /* GAPS */
+  .gap-#{$space} {
+    gap: #{$space}rem !important;
+  }
+}

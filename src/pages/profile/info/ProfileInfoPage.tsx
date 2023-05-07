@@ -1,7 +1,10 @@
 export function ProfileInfoPage () {
   return (
     <>
-      <h2>Perfil</h2>
+      <h2 className="text-center">Perfil</h2>
+      <section>
+        
+      </section>
     </>
   )
 }
