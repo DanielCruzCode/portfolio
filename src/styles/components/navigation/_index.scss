@@ -1,10 +1,77 @@
+@use '../../settings';
+
+.navigation-wrapper {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
 
 .navigation {
-  list-style: none;
-  appearance: none;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-content: center;
   place-items: center;
+  column-gap: .5rem;
+  width: 95%;
+  list-style: none;
+  appearance: none;
+  padding: 0;
+  filter: drop-shadow(settings.$shadow);
+  border-radius: settings.$border-radius-1;
+  background-color: settings.$bg-base;
 }
+
+.bubble-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem 0 1.5rem;
+  text-align: center;
+  font-size: .9em;
+  color: settings.$texts;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 50%;
+  background-color: settings.$bg-base;
+
+  & a {
+    text-decoration: none;
+    appearance: none;
+    color: inherit;
+    font-weight: 400;
+  }
+
+  // Variants
+  &__img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 10px solid settings.$bg-base;
+    width: 80%;
+    aspect-ratio: 1;
+    background-color: settings.$brand;
+    transition: transform 250ms ease, opacity 250ms ease;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotateZ(90deg);
+  }
+
+  & .active {
+    font-weight: 600;
+  }
+
+  // States
+  &:has(.active) .bubble-link__img {
+    transform: translateY(-40%) rotateZ(0);
+    opacity: 1;
+  }
+}
+
+
+

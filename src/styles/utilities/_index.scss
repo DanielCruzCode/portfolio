@@ -41,7 +41,7 @@ $border-radius-1: 11px;
 }
 
 .font-white {
-  color: settings.$white;
+  color: settings.$bg-base;
 }
 
 @each $fontSize in $unitAmounts {
