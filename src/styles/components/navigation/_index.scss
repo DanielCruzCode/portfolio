@@ -1,0 +1,10 @@
+
+.navigation {
+  list-style: none;
+  appearance: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+}
