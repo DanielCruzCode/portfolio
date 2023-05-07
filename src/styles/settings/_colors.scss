@@ -1,10 +1,12 @@
-$brand: #FECD4F;
+$primary: #FECD4F;
+$softPrimary: "#FFE299";
 $titles: #4E4E4E;
 $disabled: #FFE39C;
-$outline: darken($brand, 10);
+$outline: darken($primary, 10);
 $texts: #4F4F4F;
 $bg-base: #f6f6f6;
 $placeholder: lighten(#4F4F4F, 5);
+$textsHighlightColor: #ca9100;
 
 /* States */
 $error: #DD6E6E;

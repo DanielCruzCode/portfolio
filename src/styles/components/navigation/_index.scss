@@ -8,6 +8,7 @@
   right: 0;
   display: flex;
   justify-content: center;
+  z-index: settings.$z-index-3;
 }
 
 .navigation {
@@ -56,7 +57,7 @@
     border: 10px solid settings.$bg-base;
     width: 80%;
     aspect-ratio: 1;
-    background-color: settings.$brand;
+    background-color: settings.$primary;
     transition: transform 250ms ease, opacity 250ms ease;
     pointer-events: none;
     opacity: 0;

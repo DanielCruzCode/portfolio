@@ -1,0 +1,113 @@
+@use '../settings';
+
+.float {
+  animation-name: ani-float;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ani-float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.float-2 {
+  animation-name: ani-float-2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.44, 0.41, 0.03, 0.46);
+}
+
+@keyframes ani-float-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.float-3 {
+  animation-name: ani-float-3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.44, 0.41, 0.03, 0.46);
+}
+
+@keyframes ani-float-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.link-highlight {
+  animation-name: ani-link-highlight;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in;
+  scroll-margin-top: 5em;
+  border-radius: 20px;
+}
+
+@keyframes ani-link-highlight {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: settings.$softPrimary;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.fade-in {
+  animation-name: ani-fade-in;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes ani-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes shape {
+  0% {
+    clip-path: path("M 294.095 198.839 Q 292.556 256.411 193.336 283.3 Q 43.199 308.915 21.878 149.254 Q 25.845 77.357 80.883 40.665 Q 174.597 0.502 247.486 19.84 C 282.195 38.186 281.203 34.219 293.599 117.025 Z");
+  }
+  25% {
+    clip-path: path("M 292.358 160.08 Q 287.895 296.436 141.095 296.219 Q 5.73 277.377 12.672 181.68 Q 17.662 113.966 45.429 80.249 Q 94.021 -5.531 160.96 9.84 C 238.311 28.186 301.283 35.623 292.854 160.08 Z");
+  }
+  75% {
+    clip-path: path("M 292.358 160.08 Q 287.895 296.436 141.095 296.219 Q 5.73 277.377 7.217 183.167 Q 3.746 108.295 84.569 52.265 Q 129.69 6.648 203.075 15.077 C 238.311 28.186 301.283 35.623 292.854 160.08 Z");
+  }
+  100% {
+    clip-path: path("M 294.095 198.839 Q 292.556 256.411 193.336 283.3 Q 43.199 308.915 21.878 149.254 Q 25.845 77.357 80.883 40.665 Q 174.597 0.502 247.486 19.84 C 282.195 38.186 281.203 34.219 293.599 117.025 Z");
+  }
+}
+

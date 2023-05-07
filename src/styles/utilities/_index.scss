@@ -2,9 +2,10 @@
 @use 'fonts';
 @use 'shape';
 @use 'spacing';
+@use 'animations';
 
 /* BACKGROUNDS */
 .bg-brand {
-  background-color: settings.$brand;
+  background-color: settings.$primary;
 }
 

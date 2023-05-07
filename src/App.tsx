@@ -1,10 +1,13 @@
 import { AppRouter } from './router/AppRouter.tsx'
+import { LanguageProvider } from './context/LanguageContext.tsx'
 
 function App () {
 
   return (
     <>
-      <AppRouter/>
+      <LanguageProvider>
+        <AppRouter/>
+      </LanguageProvider>
     </>
   )
 }
