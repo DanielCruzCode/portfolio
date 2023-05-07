@@ -15,7 +15,7 @@ function AvatarInjected ({ intl }: Props) {
     <div className="avatar">
       <img
 
-        src="/assets/imgs/avatar.jpg"
+        src="/assets/imgs/avatar.jpg?v=2"
         alt={intl.formatMessage(imgAltText.alt)}
       />
     </div>

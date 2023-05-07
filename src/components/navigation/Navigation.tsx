@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { ContactIcon, KnowledgeIcon, ProfileIcon, WorkingExpIcon } from '../icons/nav-bar-icons/NavBarIcons.tsx'
+import { FormattedMessageToHTML } from '../language/FormattedMessageToHTML.tsx'
 
 export function Navigation () {
 
@@ -15,7 +16,7 @@ export function Navigation () {
             <ProfileIcon/>
           </div>
           <NavLink to={''} className={isActiveClass} end>
-            Perfil
+            <FormattedMessageToHTML id="profile-page.title"/>
           </NavLink>
         </li>
         <li className="bubble-link">
@@ -23,7 +24,7 @@ export function Navigation () {
             <KnowledgeIcon/>
           </div>
           <NavLink to={'working-experience'} className={isActiveClass}>
-            Experiencia
+            <FormattedMessageToHTML id="working-xp-page.title"/>
           </NavLink>
         </li>
         <li className="bubble-link">
@@ -31,7 +32,7 @@ export function Navigation () {
             <WorkingExpIcon/>
           </div>
           <NavLink to={'knowledge'} className={isActiveClass}>
-            Saberes
+            <FormattedMessageToHTML id="knowledge-page.title"/>
           </NavLink>
         </li>
         <li className="bubble-link">
@@ -39,7 +40,7 @@ export function Navigation () {
             <ContactIcon/>
           </div>
           <NavLink to={'contact'} className={isActiveClass}>
-            Contacto
+            <FormattedMessageToHTML id="contact-page.title"/>
           </NavLink>
         </li>
       </ul>

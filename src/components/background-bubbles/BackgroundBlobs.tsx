@@ -4,10 +4,10 @@ export function BackgroundBlobs () {
   return (
     <>
       <div className="blob-bubble-left">
-        <BlobLeft/>
+        <BlobLeft className="float"/>
       </div>
       <div className="blob-bubble-right">
-        <BlobRight/>
+        <BlobRight className="float"/>
       </div>
     </>
   )

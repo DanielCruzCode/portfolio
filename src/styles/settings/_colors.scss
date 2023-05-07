@@ -1,14 +1,20 @@
 $primary: #FECD4F;
 $softPrimary: "#FFE299";
-$titles: #4E4E4E;
+$titles: #3f3f3f;
 $disabled: #FFE39C;
 $outline: darken($primary, 10);
 $texts: #4F4F4F;
-$bg-base: #f6f6f6;
+$bg-base: #f6f6f6 !default;
 $placeholder: lighten(#4F4F4F, 5);
 $textsHighlightColor: #ca9100;
 
 /* States */
 $error: #DD6E6E;
 $success: #7DDD6E;
+
+@media (prefers-color-scheme: dark) {
+  $bg-base: #252525;
+  $texts: #c9c9c9;
+  $titles: #d9d9d9;
+}
 

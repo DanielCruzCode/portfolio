@@ -1,7 +1,9 @@
+import { FormattedMessageToHTML } from '../../../components/language/FormattedMessageToHTML.tsx'
+
 export function KnowledgePage () {
   return (
     <>
-      <h2>KnowledgePage</h2>
+      <h1 className="text-center"><FormattedMessageToHTML id="knowledge-page.title"/></h1>
     </>
   )
 }

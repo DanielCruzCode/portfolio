@@ -1,13 +1,16 @@
 import { AppRouter } from './router/AppRouter.tsx'
 import { LanguageProvider } from './context/LanguageContext.tsx'
+import { ThemeProvider } from './context/ThemeContext.tsx'
 
 function App () {
 
   return (
     <>
-      <LanguageProvider>
-        <AppRouter/>
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <AppRouter/>
+        </LanguageProvider>
+      </ThemeProvider>
     </>
   )
 }

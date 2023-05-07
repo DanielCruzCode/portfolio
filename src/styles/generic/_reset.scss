@@ -80,4 +80,12 @@ span {
 
 *, *::before, *::after, *::placeholder {
   font-family: 'Sen', sans-serif;
+  color: settings.$texts;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: settings.$titles;
+  font-family: 'Kaushan Script', sans-serif;
+  letter-spacing: .3rem;
+  font-weight: 800;
 }

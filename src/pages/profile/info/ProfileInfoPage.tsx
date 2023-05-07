@@ -4,8 +4,8 @@ import Avatar from '../../../components/avatar/Avatar.tsx'
 export function ProfileInfoPage () {
   return (
     <>
-      <h2 className="text-center"><FormattedMessageToHTML id="profile-page.title"/></h2>
-      <section className="my-2">
+      <h1 className="text-center"><FormattedMessageToHTML id="profile-page.title"/></h1>
+      <section className="my-2 flex content-center">
         <Avatar/>
       </section>
       <section>
