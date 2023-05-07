@@ -4,19 +4,19 @@ $unitAmounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 /* FONT */
 .font-brand {
-  color: settings.$primary;
+  color: var(--primary);
 }
 
 .font-title {
-  color: settings.$titles;
+  color: var(--titles);
 }
 
 .font-texts {
-  color: settings.$texts;
+  color: var(--texts);
 }
 
 .font-base {
-  color: settings.$bg-base;
+  color: var(--bg-base);
 }
 
 .text-center {

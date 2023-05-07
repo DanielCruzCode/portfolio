@@ -11,7 +11,7 @@ details > summary::marker {
 }
 
 details > summary {
-  color: settings.$textsHighlightColor;
+  color: var(--texts) HighlightColor;
 }
 
 details > .sum-tooltip-container {
@@ -51,7 +51,7 @@ details[open] > .sum-tooltip-container > .sum-tooltip {
   left: 0;
   position: absolute;
   right: 0;
-  text-decoration-color: settings.$primary;
+  text-decoration-color: var(--primary);
   text-decoration-line: underline;
   text-decoration-style: wavy;
   top: 0;

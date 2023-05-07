@@ -10,7 +10,7 @@ export function Navigation () {
 
   return (
     <section className="navigation-wrapper">
-      <ul className="navigation">
+      <ul className="navigation" tabIndex={1} aria-label="navigation">
         <li className="bubble-link">
           <div className="bubble-link__img">
             <ProfileIcon/>
