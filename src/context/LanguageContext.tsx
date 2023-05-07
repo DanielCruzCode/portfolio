@@ -3,24 +3,37 @@ import { IntlProvider } from 'react-intl'
 import spanishMessages from '../langs/es.json'
 import englishMessages from '../langs/en.json'
 
-type LanguageContextType = 'en' | 'es'
+type LanguageDispatchType = {
+  setLanguage: (newLanguage: string) => void,
+  isValidLanguage: (lang: string) => boolean
+}
 
-type SetLanguageType = ((newLanguage: LanguageContextType) => void) | null
+const MESSAGES: any = {
+  'es': spanishMessages,
+  'en': englishMessages
+}
 
-export const LanguageContext = createContext<LanguageContextType>('en')
-export const LanguageDispatchContext = createContext<SetLanguageType>(null)
+export const LanguageContext = createContext<string>('en')
+export const LanguageDispatchContext = createContext<LanguageDispatchType>({
+  setLanguage: () => null,
+  isValidLanguage: () => false
+})
 
 export function LanguageProvider ({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<LanguageContextType>('en')
+  const [language, setLang] = useState<string>('en')
   const messages = getMessagesFromLanguage(language)
 
-  function changeLanguage (newLanguage: LanguageContextType) {
-    setLanguage(newLanguage)
+  function changeLanguage (newLanguage: string) {
+    setLang(newLanguage)
+  }
+
+  function isValidLanguage (lang: string): boolean {
+    return Object.keys(MESSAGES).some(key => key == lang)
   }
 
   return (
     <LanguageContext.Provider value={language}>
-      <LanguageDispatchContext.Provider value={changeLanguage}>
+      <LanguageDispatchContext.Provider value={{ setLanguage: changeLanguage, isValidLanguage }}>
         <IntlProvider messages={messages} locale={language} defaultLocale="en">
           {children}
         </IntlProvider>
@@ -29,12 +42,8 @@ export function LanguageProvider ({ children }: { children: ReactNode }) {
   )
 }
 
-function getMessagesFromLanguage (lang: LanguageContextType) {
-  const messages = {
-    'es': spanishMessages,
-    'en': englishMessages
-  }
-
-  return messages[lang] ?? englishMessages
+function getMessagesFromLanguage (lang: string) {
+  return MESSAGES[lang] ?? englishMessages
 }
+
 

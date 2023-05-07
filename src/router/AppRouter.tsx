@@ -5,12 +5,12 @@ import { ProfileInfoPage } from '../pages/profile/info/ProfileInfoPage.tsx'
 import { WorkingExperiencePage } from '../pages/profile/working-experience/WorkingExperiencePage.tsx'
 import { KnowledgePage } from '../pages/profile/knowledge/KnowledgePage.tsx'
 import { ContactPage } from '../pages/profile/contact/ContactPage.tsx'
-import { useChangeLanguage, useLanguage } from '../hooks/useLanguage.tsx'
+import { useLanguageDispatcher, useLanguage } from '../hooks/useLanguage.tsx'
 
 export function AppRouter () {
 
   const language = useLanguage()
-  const changeLanguage = useChangeLanguage()
+  const { setLanguage, isValidLanguage } = useLanguageDispatcher()
 
   console.log('Language', language)
 
@@ -18,7 +18,20 @@ export function AppRouter () {
     {
       path: '/',
       loader: () => {
-        if (changeLanguage) changeLanguage('en')
+        setLanguage('en')
+        return null
+      },
+      element: <Navigate to={`/${language}`} replace={true}/>,
+      errorElement: <ErrorPage/>,
+    },
+    {
+      path: '/:lang',
+      loader: ({ params }) => {
+        const lang = params['lang'] ?? ''
+        if (!isValidLanguage(lang)) {
+          setLanguage('en')
+        }
+        setLanguage(lang)
         return null
       },
       element: <Navigate to={`/${language}`} replace={true}/>,

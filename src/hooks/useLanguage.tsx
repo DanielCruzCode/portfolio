@@ -5,6 +5,6 @@ export function useLanguage () {
   return useContext(LanguageContext)
 }
 
-export function useChangeLanguage () {
+export function useLanguageDispatcher () {
   return useContext(LanguageDispatchContext)
 }
