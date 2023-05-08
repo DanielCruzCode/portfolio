@@ -1,25 +1,35 @@
 :root {
   --primary: #FECD4F;
-  --softPrimary: "#FFE299";
+  --softPrimary: #FFE299;
   --titles: #3f3f3f;
   --disabled: #FFE39C;
-  --outline: darken(var(--primary), 10);
+  --outline: var(--primary);
   --texts: #4F4F4F;
   --texts-bold: #4F4F4F;
   --bg-base: #f6f6f6;
-  --placeholder: lighten(#4F4F4F, 5);
-  --textsHighlightColor: #ca9100;
+  --bg-base-darken: #f4f4f4;
+  --placeholder: #868686;
+  --texts-highlight: #ca9100;
+  --texts-selection: rgb(254 205 79 / 41%);
+  --shadow-color: rgba(100, 100, 111, 0.2);
+  --shadow-lighten-color: rgba(100, 100, 111, 0.2);
+  --shadow-center-color: rgba(0, 0, 0, 0.10);
 
   /* States */
   --error: #DD6E6E;
   --success: #7DDD6E;
 
   @media (prefers-color-scheme: dark) {
-    --bg-base: #252525;
+    /*--bg-base: #252525;*/
+    --bg-base: #2d2d2d;
+    --bg-base-darken: #1f1f1f;
     --texts: #dddddd;
     --texts-bold: #e3e3e3;
     --titles: #d9d9d9;
     --outline: darken(var(--primary), 20);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --shadow-center-color: rgba(0, 0, 0, 0.1);
+    --shadow-lighten-color: rgba(220, 220, 220, 0.2);
   }
 }
 

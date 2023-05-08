@@ -23,7 +23,7 @@
   padding: 0;
   filter: drop-shadow(settings.$shadow);
   border-radius: settings.$border-radius-1;
-  background-color: var(--bg-base);
+  background-color: var(--bg-base-darken);
 }
 
 .bubble-link {
@@ -38,7 +38,7 @@
   text-decoration: none;
   width: 100%;
   border-radius: 50%;
-  background-color: var(--bg-base);
+  background-color: var(--bg-base-darken);
 
   & a {
     text-decoration: none;
@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 10px solid var(--bg-base);
+    border: 10px solid var(--bg-base-darken);
     width: 80%;
     aspect-ratio: 1;
     background-color: var(--primary);
@@ -67,6 +67,10 @@
   & .active {
     font-weight: bold;
     color: var(--texts-bold);
+  }
+
+  & path {
+    fill: #3f3f3f;
   }
 
   // States

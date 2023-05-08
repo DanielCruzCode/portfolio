@@ -11,7 +11,8 @@ details > summary::marker {
 }
 
 details > summary {
-  color: var(--texts) HighlightColor;
+  color: var(--texts-highlight);
+  font-weight: bold;
 }
 
 details > .sum-tooltip-container {
@@ -30,14 +31,14 @@ details > .sum-tooltip-container > .sum-tooltip {
 }
 
 details[open] > .sum-tooltip-container > .sum-tooltip {
-  background-color: white;
+  background-color: var(--bg-base-darken);
   border-radius: 10px;
   box-shadow: settings.$shadow-centered;
   max-width: 20rem;
   padding: 3rem 1rem 1rem 1rem;
   position: absolute;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(10px);
   max-height: 78vh;
   overflow-y: auto;
   cursor: auto;

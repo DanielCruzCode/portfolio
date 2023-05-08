@@ -4,15 +4,14 @@ import { ProfileLayout } from '../layouts/ProfileLayout.tsx'
 import { ProfileInfoPage } from '../pages/profile/info/ProfileInfoPage.tsx'
 import { WorkingExperiencePage } from '../pages/profile/working-experience/WorkingExperiencePage.tsx'
 import { KnowledgePage } from '../pages/profile/knowledge/KnowledgePage.tsx'
-import { ContactPage } from '../pages/profile/contact/ContactPage.tsx'
+import ContactPage from '../pages/profile/contact/ContactPage.tsx'
 import { useLanguageDispatcher, useLanguage } from '../hooks/useLanguage.tsx'
+import { useState } from 'react'
 
 export function AppRouter () {
-
   const language = useLanguage()
+  const [currentLanguage] = useState(language)
   const { setLanguage, isValidLanguage } = useLanguageDispatcher()
-
-  console.log('Language', language)
 
   const router = createBrowserRouter([
     {
@@ -21,7 +20,7 @@ export function AppRouter () {
         setLanguage('en')
         return null
       },
-      element: <Navigate to={`/${language}`} replace={true}/>,
+      element: <Navigate to={`/${currentLanguage}`} replace={true}/>,
       errorElement: <ErrorPage/>,
     },
     {
@@ -34,11 +33,11 @@ export function AppRouter () {
         setLanguage(lang)
         return null
       },
-      element: <Navigate to={`/${language}`} replace={true}/>,
+      element: <Navigate to={`/${currentLanguage}`} replace={true}/>,
       errorElement: <ErrorPage/>,
     },
     {
-      path: `${language}/`,
+      path: `${currentLanguage}/`,
       element: <ProfileLayout/>,
       errorElement: <ErrorPage/>,
       children: [

@@ -9,3 +9,10 @@ strong foundations of Javascript syntax and best practices.
 This is the second version of my portfolio, the first one has made on Next.js, but I really want to make a low cost site
 and deploy it in AWS cloud. This project is made from scratch, only with Vite Typescript template. React, React router
 dom and so on installations and configurations are made by my own.
+
+## TODO
+
+- [ ] Add experience page
+- [ ] Update the text information in both langs
+- [ ] Add Whatsapp Bussines integration to contact form
+- [ ] (optional) Toggle theme with a button

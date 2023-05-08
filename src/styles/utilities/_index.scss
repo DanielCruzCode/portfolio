@@ -9,6 +9,10 @@
   background-color: var(--primary);
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -17,3 +21,10 @@
   justify-content: center;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}

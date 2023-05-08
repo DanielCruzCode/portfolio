@@ -81,6 +81,15 @@ span {
 *, *::before, *::after, *::placeholder {
   font-family: 'Sen', sans-serif;
   color: var(--texts);
+  outline-color: var(--outline);
+}
+
+*:focus, *:focus-visible {
+  outline: 2px solid var(--primary);
+}
+
+*::selection {
+  background-color: var(--texts-selection);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,4 +101,24 @@ h1, h2, h3, h4, h5, h6 {
 
 strong {
   color: var(--texts-bold);
+}
+
+a {
+  color: var(--texts-highlight);
+}
+
+hr {
+  border: 1px solid var(--texts);
+  opacity: .2;
+}
+
+input {
+  appearance: none;
+  border: none;
+  border-radius: settings.$border-radius-1;
+  padding: .5rem 1rem;
+}
+
+input::placeholder {
+  color: var(--placeholder);
 }

@@ -5,7 +5,7 @@ export function ProfileInfoPage () {
   return (
     <>
       <h1 className="text-center"><FormattedMessageToHTML id="profile-page.title"/></h1>
-      <section className="my-2 flex content-center">
+      <section className="mt-2 mb-5 flex content-center">
         <Avatar/>
       </section>
       <section>
