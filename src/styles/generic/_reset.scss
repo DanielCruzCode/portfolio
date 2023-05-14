@@ -84,7 +84,11 @@ span {
   outline-color: var(--outline);
 }
 
-*:focus, *:focus-visible {
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
   outline: 2px solid var(--primary);
 }
 

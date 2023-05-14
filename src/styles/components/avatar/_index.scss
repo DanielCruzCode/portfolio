@@ -1,11 +1,12 @@
 
 .avatar {
   width: 300px;
-  height: 300px;
+  aspect-ratio: 1;
   background-size: cover;
   background-position: center center;
   background-repeat: repeat;
-  background-image: url("https://avatars.githubusercontent.com/u/50213595?v=4");
   clip-path: path("M 294.095 198.839 Q 292.556 256.411 193.336 283.3 Q 43.199 308.915 21.878 149.254 Q 25.845 77.357 80.883 40.665 Q 174.597 0.502 247.486 19.84 C 282.195 38.186 281.203 34.219 293.599 117.025 Z");
   animation: shape 10s infinite cubic-bezier(0.04, 0.56, 1, 0.66);
+
+  // TODO: Scale avatar when page is lg and give some margins to avatar's container
 }

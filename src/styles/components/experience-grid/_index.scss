@@ -1,0 +1,32 @@
+@use '../../settings';
+@use '../../tools';
+
+.experience-grid {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 3rem;
+
+  @include tools.md {
+    grid-template-columns: 1fr;
+  }
+
+  & .experience-img {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto 3rem;
+
+    & img {
+      border-radius: 50%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: var(--bg-base-darken);
+    border-radius: settings.$border-radius-1;
+    box-shadow: settings.$shadow;
+    padding: 1rem 3rem 3rem;
+  }
+}

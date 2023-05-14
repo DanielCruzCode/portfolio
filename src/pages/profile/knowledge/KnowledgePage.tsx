@@ -7,12 +7,10 @@ export function KnowledgePage () {
 
   return (
     <>
-      <h1 className="text-center"><FormattedMessageToHTML id="knowledge-page.title"/></h1>
-      <section className="content-container">
-        <KnowledgeGrid data={data}/>
-        <hr className="my-3"/>
-        <KnowledgeSections data={data}/>
-      </section>
+      <h1 className="text-center mb-4"><FormattedMessageToHTML id="knowledge-page.title"/></h1>
+      <KnowledgeGrid data={data}/>
+      <hr className="my-3"/>
+      <KnowledgeSections data={data}/>
     </>
   )
 }

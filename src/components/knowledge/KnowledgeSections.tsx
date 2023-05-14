@@ -14,8 +14,6 @@ export function KnowledgeSections ({ data }: Props) {
     return tech.id.slice(1)
   }
 
-  console.log(currentHash)
-
   return (
     <>
       {data.knownTechs.map((tech, index) => {

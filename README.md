@@ -13,6 +13,7 @@ dom and so on installations and configurations are made by my own.
 ## TODO
 
 - [ ] Add experience page
-- [ ] Update the text information in both langs
-- [ ] Add Whatsapp Bussines integration to contact form
+- [ ] Button to scroll to top
+- [ ] Update the text information in both languages
+- [ ] Add Whatsapp Business integration to contact form
 - [ ] (optional) Toggle theme with a button

@@ -1,10 +1,15 @@
 @use '../../settings';
+@use '../../tools';
 
 .knowledge-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   row-gap: 2rem;
+
+  @include tools.lg {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   &__item {
     display: flex;
