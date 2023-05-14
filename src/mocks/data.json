@@ -104,5 +104,27 @@
       "messageId": "knowledge-page.postman",
       "image": "/assets/imgs/technologies/postman.png"
     }
+  ],
+  "workingExperience": [
+    {
+      "imgSrc": "/assets/imgs/companies/bemaster.png",
+      "imgAlt": "BeMaster logo",
+      "messageId": "working-xp-page.company-bemaster"
+    },
+    {
+      "imgSrc": "/assets/imgs/companies/blacksip.png",
+      "imgAlt": "Blacksip logo",
+      "messageId": "working-xp-page.company-blacksip"
+    },
+    {
+      "imgSrc": "/assets/imgs/companies/creaciones-digitales.png",
+      "imgAlt": "Creaciones Digitales logo",
+      "messageId": "working-xp-page.company-creaciones-digitales"
+    },
+    {
+      "imgSrc": "/assets/imgs/companies/sena.png",
+      "imgAlt": "SENA logo",
+      "messageId": "working-xp-page.company-sena"
+    }
   ]
 }
